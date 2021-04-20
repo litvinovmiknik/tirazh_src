@@ -1,0 +1,95 @@
+.about-home
+    size 100% auto
+    min-height 567px
+    background-color #E2E2E2
+    background linear-gradient(top, #E2E2E2, #D7D7D7)
+    padding 50px 0
+    position: relative
+    z-index 2
+    +below(1220px)
+        padding-bottom: 0
+
+    &__img-bg
+        size 347px 667px
+        background-image url(../images/studio_about_bg.jpg)
+        background-repeat no-repeat
+        position: absolute
+        top 0
+        left 0
+        z-index 3
+        +below(1220px)
+            display: none
+
+    &_center
+        size 600px 100%
+        margin 0 auto
+        position: relative
+        left -300px
+        z-index 4
+        +below(1220px)
+            left 0
+            padding-bottom: 50px
+        +below(620px)
+            width 100%
+
+    &__video
+        width 100%
+
+    &__title
+        title()
+        +below(620px)
+            margin-left: 10px
+
+    &__txt1
+        font 14px PantonBold
+        color dark_blue
+        margin 20px 0
+        +below(620px)
+            margin-left: 10px
+
+    &__txt2
+        font 14px PantonRegular
+        color dark_blue
+        +below(620px)
+            margin-left: 10px
+
+    &__link
+        font 14px PantonBold
+        color light_blue
+        text-decoration: none
+
+    &__map
+        position: absolute
+        top 0
+        right 0
+        size 50% 100%
+        background-image url(../images/home_map.jpg)
+        background-repeat no-repeat
+        +below(1220px)
+            position: relative
+            size 100% 667px
+            background-size cover
+        +below(510px)
+            background-size contain
+        +below(360px)
+            height 600px
+
+    &__marker
+        margin 103px 0 0 112px
+        +below(1220px)
+            margin-top: 0
+            position: relative
+            top 103px
+        +below(510px)
+            margin-left 10px
+            top 300px
+        +below(420px)
+            top 250px
+        +below(360px)
+            top 230px
+        +below(330px)
+            top 210px
+
+        .marker__img
+            +below(510px)
+                display: none

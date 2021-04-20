@@ -1,0 +1,30 @@
+.marker
+    size 376px auto
+    border-radius 3px
+    background linear-gradient(top left, light_orange, dark_orange)
+    text-align: center
+    position: relative
+    padding-bottom: 25px
+    +below(420px)
+        width 90%
+
+    &__facade
+        margin 25px 0
+        +below(420px)
+            width 90%
+
+    &__name
+        font 18px PantonBlack
+        color #fff
+        margin-bottom 10px
+
+    &__address
+        font 18px PantonBold
+        color #fff
+
+    &__img
+        position: absolute
+        left 0
+        right 0
+        margin auto
+        bottom -42px

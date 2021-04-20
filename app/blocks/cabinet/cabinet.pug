@@ -1,0 +1,15 @@
+.content
+    .content_center
+        .cabinet
+            +breadcrumbs(['Главная', 'Личный кабинет'])
+            +title-big('Личный кабинет')(class="cabinet__title")
+            .cabinet__list-wrap
+                a.cabinet__item(href="profile.html")
+                    img.cabinet__icon(src="assets/images/cabinet/1.png")
+                    p.cabinet__name Профиль
+                a.cabinet__item(href="history.html")
+                    img.cabinet__icon(src="assets/images/cabinet/2.png")
+                    p.cabinet__name История заказов
+                a.cabinet__item(href="sub.html")
+                    img.cabinet__icon(src="assets/images/cabinet/3.png")
+                    p.cabinet__name Подписка на рассылки

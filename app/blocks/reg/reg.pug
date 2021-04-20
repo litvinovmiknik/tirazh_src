@@ -1,0 +1,14 @@
+.content
+    .content_center
+        +breadcrumbs(['Главная', 'Регистрация пользователя'])
+        .reg
+            +title-big('Регистрация пользователя')(class="reg__title")
+            form.reg__form(action="#" method="post")
+                +input('email', 'email', 'E-mail')
+                +input('password', 'password', 'Пароль')
+                +input('password', 'password', 'Подтвердите пароль')
+                +radio-btn('person1', 'person', 'Физическое лицо')(class="reg__radio-person1")
+                +radio-btn('person2', 'person', 'Юридическое лицо')(class="reg__radio-person2")
+                +checkbox('agree', 'agree', 'Даю согласие на обработку моих персональных данных')(class="reg__checkbox-agree")
+                +checkbox('mail', 'mail', 'Подписаться на рассылку')(class="reg__checkbox-mail")
+                +orange-btn('Зарегистрироваться')

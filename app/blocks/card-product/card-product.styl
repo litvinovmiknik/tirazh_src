@@ -1,0 +1,326 @@
+.card-product
+    size 100% 100%
+    clearfix()
+
+    &__title
+        title()
+        margin-top: 25px
+        +below(1220px)
+            margin-left: 10px
+
+    &__left
+        size 586px auto
+        float left
+        margin-right: 28px
+        +below(1220px)
+            float none
+            margin-left: 10px
+            margin-right: 0
+        +below(620px)
+            width 100%
+            margin-left: 0
+
+    &__slider
+        size 586px 459px
+        position: relative
+        +below(440px)
+            margin-top: 40px
+        +below(375px)
+            margin-top: 0
+
+    &__slider-item
+        position: relative
+
+    &__slider-img
+        size 570px 443px
+        border-img-card-product()
+        +below(620px)
+            width 100%!important
+
+    &__slider-item:hover &__slider-hover
+        display: block
+        +below(560px)
+            display: none
+
+    &__slider-hover
+        display: none
+        text-decoration: none
+        position: absolute
+        top 8px
+        left 8px
+        size 570px 443px
+        background-color rgba(0,0,0,.5)
+        background-image url(../images/watch_icon.png)
+        background-repeat no-repeat
+        background-position center
+        +below(620px)
+            size 100%
+            top 0
+            left 0
+
+    &__pager
+        text-align: center
+        margin-top: 15px
+        +below(560px)
+            display: none
+
+    &__pager-link
+        text-decoration: none
+        margin 0 5px
+        display: inline-block
+        position: relative
+
+        &_active
+            position: absolute
+            top -5px
+            left -5px
+            z-index 3
+            size 97px 101px
+            margin 10px
+            display none
+            background-color rgba(248,130,73,0.5)
+
+    .active &__pager-link_active
+        display: inline-block
+
+    &__pager-img
+        position: relative
+        z-index 2
+        border-img-review()
+
+    .bx-wrapper .bx-controls-direction .bx-prev
+        top inherit
+        bottom -76px
+        left 20px
+        +below(560px)
+            bottom inherit
+            left inherit
+            top -50px
+            right 21px
+        +below(440px)
+            top -5px
+            right 31px
+        +below(375px)
+            top -40px
+
+    .bx-wrapper .bx-controls-direction .bx-next
+        top inherit
+        bottom -76px
+        right 20px
+        +below(560px)
+            bottom inherit
+            left inherit
+            top -50px
+            right 0
+        +below(440px)
+            top -5px
+            right 11px
+        +below(375px)
+            top -40px
+
+    &__right
+        size 586px auto
+        float left
+        +below(1220px)
+            float none
+            margin-left: 10px
+            margin-top: 50px
+        +below(620px)
+            width 100%
+            margin-left: 0
+
+    &__cost
+        clearfix()
+        +below(620px)
+            margin-left: 10px
+
+    &__cost-title
+        font 18px PantonBlack
+        color dark_blue
+        text-transform: uppercase
+
+    &__cost-item
+        float left
+        margin 20px 30px 0 0
+
+    &__cost-value
+        font 30px PantonBold
+        line-height 30px
+        color dark_blue
+
+        &_orange
+            color orange
+
+    &__cost-desc
+        font 14px PantonRegular
+        color gray
+
+    /* Табы карточки товара */
+    &__tabs
+        margin-top: 20px
+
+    &__tabs-head-item
+        border-top-left-radius 3px
+        border-top-right-radius 3px
+        background-color light_blue!important
+        font 12px PantonBold!important
+        color #fff!important
+        text-transform: uppercase!important
+        padding 12px 40px!important
+
+    &__tabs-head-item.active
+        background-color #fff!important
+        color gray!important
+
+    &__tabs-box
+        width 100%
+        border-top-right-radius 3px
+        border-bottom-right-radius 3px
+        border-bottom-left-radius 3px
+        padding 20px
+        box-sizing border-box
+
+    &__side-radio label
+        padding 5px 25px
+        margin 8px 10px 0 0
+
+    &__edition
+        margin-top: 15px
+
+    &__edition-radio label
+        padding 5px 10px
+        margin-top: 8px
+
+    &__paper
+        margin-top: 15px
+        display: inline-block
+        vertical-align: top
+        +below(580px)
+            margin-right: 20px
+
+    &__paper-radio-wrap
+        margin-top: 8px
+
+    &__paper-radio
+        margin-bottom 5px
+
+    &__paper-color
+        display: inline-block
+        vertical-align: top
+        margin 15px 0 0 128px
+        +below(580px)
+            margin-left: 0
+
+    &__paper-color-wrap
+        width 230px
+        margin-top: 8px
+
+    &__paper-color-item
+        margin 0 3px 3px 0
+
+    &__upload
+        margin-top: 10px
+        +below(768px)
+            display: none
+
+    &__upload-status
+        font 14px PantonBold
+        color gray
+
+    &__upload-btn input[type="file"]
+        display: none
+
+    &__upload-btn
+        display: inline-block
+        font 14px PantonRegular
+        color light_blue
+        text-decoration: underline
+        margin-left: 5px
+        cursor pointer
+
+    &__table
+        width 100%
+
+    &__row:nth-child(even)
+        background-color light_gray
+
+    &__row
+        font 14px PantonBold
+
+    &__row > th:first-child
+        text-align left
+        padding-left: 10px
+
+    &__row > td:first-child
+        text-align left
+        padding-left: 10px
+        color gray
+
+    &__th
+        text-align: center
+        padding-bottom 10px
+
+    &__cell
+        text-align: center
+        padding 3px 0
+        color orange
+
+    &__note
+        font 14px PantonRegular
+        color dark_blue
+        margin-top: 15px
+
+        &_orange
+            font-family PantonBold
+            color orange
+
+    &__buttons
+        display: inline-block
+        vertical-align: top
+        width 206px
+        margin-top: 20px
+        +below(620px)
+            margin-left: 10px
+            margin-right: 20px
+
+    &__order-btn
+        font-size 16px!important
+
+    &__one-click
+        width 100%!important
+        text-transform: uppercase!important
+        font-size 12px!important
+        margin-top: 10px!important
+
+    &__guarantee
+        display: inline-block
+        vertical-align: top
+        padding 15px 20px
+        border 1px solid orange
+        border-radius 3px
+        margin-top: 20px
+        margin-left: 63px
+        +below(620px)
+            margin-left: 10px
+
+    &__guarantee-txt1
+        font 21px PantonBlack
+        line-height 21px
+        color orange
+        text-transform: uppercase
+
+    &__guarantee-txt2
+        font 14px PantonBold
+        color gray
+        text-transform: uppercase
+        margin 4px 0
+
+        &_orange
+            color orange
+
+    &__guarantee-link
+        font 14px PantonRegular
+        color light_blue
+
+        &_orange
+            color orange

@@ -1,0 +1,29 @@
+.news-detail
+    &__title
+        margin 20px 0
+        +below(1220px)
+            margin-left: 10px
+    &__content
+        size 100% auto
+        background-color #fff
+        padding 20px
+        box-sizing border-box
+        border-radius 3px
+    &__date
+        font 12px PantonRegular
+        color gray
+    &__txt
+        font 14px PantonRegular
+        color dark_blue
+        margin 10px 0
+    &__img-wrap
+        clearfix()
+    &__img
+        float left
+        margin-top: 20px
+        +below(620px)
+            width 100%
+        &:first-child
+            margin-right: 32px
+            +below(720px)
+                margin-right: 0

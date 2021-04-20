@@ -1,0 +1,33 @@
+include ../helpers/mixins
+
+doctype html
+html(lang="ru")
+    head
+        block title
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name='description' content="")
+        meta(name='keywords' content="")
+        meta(name='author' content="daikonar")
+        link(rel="stylesheet" href="assets/styles/slicknav.min.css")
+        link(rel="stylesheet" href="assets/styles/jquery.bxslider.css")
+        link(rel="stylesheet" href="assets/styles/tabs-style.css")
+        link(rel="stylesheet" href="assets/styles/jquery.fancybox.min.css")
+        link(rel="stylesheet" href="assets/styles/jquery.jscrollpane.css")
+        link(rel="stylesheet" href="assets/styles/app.css")
+        link(rel="icon" type="image/vnd.microsoft.icon" href="assets/images/favicon.ico")
+    body
+        include ../../blocks/header/header
+        block body
+        include ../../blocks/footer/footer
+        include ../../blocks/widjet/widjet
+        include ../../blocks/popup/popup
+        script(src="assets/scripts/jquery-1.12.4.min.js")
+        script(src="assets/scripts/jquery.fancybox.min.js")
+        script(src="assets/scripts/jquery.slicknav.min.js")
+        script(src="assets/scripts/jquery.bxslider.min.js")
+        script(src="assets/scripts/jquery.slides.min.js")
+        script(src="assets/scripts/dm-tabs.js")
+        script(src="assets/scripts/jquery.mousewheel.js")
+        script(src="assets/scripts/jquery.jscrollpane.min.js")
+        script(src="assets/scripts/app.min.js")

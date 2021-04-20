@@ -1,0 +1,314 @@
+.content
+    .content_center
+        .calc
+            +breadcrumbs(['Главная', 'Расчет стоимости печати'])
+            +title-big('Расчет стоимости печати')(class="calc__title")
+            form.calc__form(action="#" method="post")
+                .calc__tabs.tabs_block
+                    ul.calc__tabs-head.tabs
+                        li.calc__tabs-head-item.active калькулятор
+                        li.calc__tabs-head-item форматы
+                        li.calc__tabs-head-item подготовка макетов
+                    .calc__tabs-box.box.calc__tabs-box-calc.visible
+                        .calc__left
+                            .calc__format
+                                +title-mid('формат, мм')
+                                img.calc__help.calc__help-format(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-format
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__standart
+                                    +radio-fill-btn('standart1', 'standart', 'стандартный')
+                                    +radio-fill-btn('standart2', 'standart', 'нестандартный')
+                                .calc__flyer
+                                    +radio-btn('flyer1', 'flyer', '<b>Листовка</b><br>210х99мм')
+                                    +radio-btn('flyer2', 'flyer', '<b>Листовка 2</b><br>210х99мм')
+                                    +radio-btn('flyer3', 'flyer', '<b>Листовка 3</b><br>210х99мм')
+                                    +radio-btn('flyer4', 'flyer', '<b>Листовка 4</b><br>210х99мм')
+                                .calc__size
+                                    p.calc__size-title Свой размер
+                                    +input('text', 'width', 'Ширина')(class="calc__size-width")
+                                    +input('text', 'height', 'Высота')(class="calc__size-height")
+                            .calc__edition
+                                +title-mid('тираж')
+                                img.calc__help.calc__help-edition(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-edition
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__edition-radio-wrap
+                                    +radio-btn('edition1', 'edition', '100')
+                                    +radio-btn('edition2', 'edition', '300')
+                                    +radio-btn('edition3', 'edition', '500')
+                                    +radio-btn('edition4', 'edition', '1000')
+                                    +radio-btn('edition5', 'edition', '1500')
+                                    +radio-btn('edition6', 'edition', '2000')
+                                    +radio-btn('edition7', 'edition', '2500')
+                                    +radio-btn('edition8', 'edition', '3000')
+                                    +input('text', 'edition', 'Другое')(class="calc__edition-input")
+                            .calc__color
+                                +title-mid('цветность')
+                                img.calc__help.calc__help-color(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-color
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__color-radio-wrap
+                                    +radio-btn('color1', 'color', '<b>4+0</b><br>с одной стороны')
+                                    +radio-btn('color2', 'color', '<b>4+4</b><br>с двух сторон')
+                            .calc__paper
+                                +title-mid('бумага')
+                                img.calc__help.calc__help-paper(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-paper
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__paper-wrap
+                                    .calc__paper-type.scroll-pane#pane
+                                        +radio('paper-type1', 'paper-type', 'Мелованная бумага')
+                                        +radio('paper-type2', 'paper-type', 'Color Copy Clear')
+                                        +radio('paper-type3', 'paper-type', 'Самоклеющаяся бумага')
+                                        +radio('paper-type4', 'paper-type', 'Лен')
+                                        +radio('paper-type5', 'paper-type', 'Sirio')
+                                        +radio('paper-type6', 'paper-type', 'Touche Cover')
+                                        +radio('paper-type7', 'paper-type', 'Калька')
+                                        +radio('paper-type8', 'paper-type', 'Калька')
+                                        +radio('paper-type9', 'paper-type', 'Калька')
+                                        +radio('paper-type10', 'paper-type', 'Калька')
+                                        +radio('paper-type11', 'paper-type', 'Калька')
+                                    .calc__paper-density
+                                        +title-small('Плотность')(class="calc__paper-density-title")
+                                        .calc__paper-density-list-wrap
+                                            +radio-btn('paper-density1', 'paper-density', '120')
+                                            +radio-btn('paper-density2', 'paper-density', '130')
+                                            +radio-btn('paper-density3', 'paper-density', '140')
+                                            +radio-btn('paper-density4', 'paper-density', '150')
+                                            +radio-btn('paper-density5', 'paper-density', '160')
+                                            +radio-btn('paper-density6', 'paper-density', '170')
+                                            +radio-btn('paper-density7', 'paper-density', '180')
+                                            +radio-btn('paper-density8', 'paper-density', '190')
+                                            +radio-btn('paper-density9', 'paper-density', '200')
+                                            +radio-btn('paper-density10', 'paper-density', '210')
+                                            +radio-btn('paper-density11', 'paper-density', '220')
+                                            +radio-btn('paper-density12', 'paper-density', '230')
+                                            +radio-btn('paper-density13', 'paper-density', '240')
+                                            +radio-btn('paper-density14', 'paper-density', '250')
+                                            +radio-btn('paper-density15', 'paper-density', '260')
+                                            +radio-btn('paper-density16', 'paper-density', '270')
+                                            +radio-btn('paper-density17', 'paper-density', '280')
+                                            +radio-btn('paper-density18', 'paper-density', '290')
+                            .calc__perforation
+                                +title-mid('перфорация')
+                                img.calc__help.calc__help-perforation(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-perforation
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__perforation-radio-wrap
+                                    +radio-btn('perforation1', 'perforation', 'нет')
+                                    +radio-btn('perforation2', 'perforation', '1 линия')
+                                    +radio-btn('perforation3', 'perforation', '2 линии')
+                            .calc__number
+                                +title-mid('нумерация')
+                                img.calc__help.calc__help-number(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-number
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__number-radio-wrap
+                                    +radio-btn('number1', 'number', 'нет')
+                                    +radio-btn('number2', 'number', '1 номер')
+                                    +radio-btn('number3', 'number', '2 номера')
+                                    +radio-btn('number4', 'number', '3 номера')
+                            .calc__lamination
+                                +title-mid('ламинация')
+                                img.calc__help.calc__help-lamination(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-lamination
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__lamination-radio-wrap
+                                    +radio-btn('lamination1', 'lamination', 'нет')
+                                    +radio-btn('lamination2', 'lamination', 'Глянцевая')
+                                    +radio-btn('lamination3', 'lamination', 'Матовая')
+                                    +radio-btn('lamination4', 'lamination', 'Slik Feel')
+                            .calc__thickness
+                                +title-mid('толщина')
+                                img.calc__help.calc__help-thickness(src="assets/images/help_icon.png")
+                                .calc__help-popup.calc__help-popup-thickness
+                                    img.calc__help-popup-pointer(src="assets/images/help_popup_pointer.png")
+                                    p.calc__help-popup-txt.
+                                        Формат указан по формуле «Ширина х Высота». Формат указан итоговый — обрезной.
+                                        Формат файла вашего макета должен минимум на 2 мм по каждой из сторон превышать
+                                        формат итоговый, т.е. он должен быть дообрезным. Таким образом, если нужна
+                                        визитка форматом 90х50 мм, то формат файла должен быть минимум 94х54 мм.
+                                        Подробнее о допечатной подготовке — в документе «Требования к файлам»
+                                .calc__thickness-radio-wrap
+                                    +radio-btn('thickness1', 'thickness', '120')
+                                    +radio-btn('thickness2', 'thickness', '130')
+                                    +radio-btn('thickness3', 'thickness', '140')
+                                    +radio-btn('thickness4', 'thickness', '150')
+                                    +radio-btn('thickness5', 'thickness', '160')
+                                    +radio-btn('thickness6', 'thickness', '170')
+                        .calc__right
+                            +title-mid('ваш заказ')
+                            .calc__right-info
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Изделие:
+                                    span.calc__right-info-value Листовка
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Формат:
+                                    span.calc__right-info-value 210х99мм
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Количество на листе:
+                                    span.calc__right-info-value 4 экземпляра
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Тираж:
+                                    span.calc__right-info-value 100
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Бумага:
+                                    span.calc__right-info-value Мелованная бумага 120 г/м3
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Цветность:
+                                    span.calc__right-info-value 4+0 с одной стороны
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Перфорация:
+                                    span.calc__right-info-value Нет
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Нумерация:
+                                    span.calc__right-info-value Нет
+                                p.calc__right-info-item
+                                    span.calc__right-info-title Ламинация:
+                                    span.calc__right-info-value Нет
+                            .calc__right-cost
+                                p.calc__right-cost-one
+                                    span.calc__right-cost-one-title Цена за экземпляр:
+                                    span.calc__right-cost-one-value 16,35 Р.
+                                p.calc__right-cost-all
+                                    span.calc__right-cost-all-title Стоимость заказа:
+                                    span.calc__right-cost-all-value 1635.00 Р.
+                            .calc__right-upload
+                                span.calc__upload-status#file-name Файл не выбран
+                                label.calc__upload-btn
+                                    input(name="file" type="file" onchange="getFileName();" id="uploaded-file")
+                                    span Загрузить свой макет
+                            p.calc__right-time Примерный срок изготовления составит 3 часа
+                            +orange-btn('Заказать')(class="calc__right-order-btn")
+                            +more-btn('сбросить')(class="calc__right-cancel-btn")
+                            p.calc__right-desc.
+                                Онлайн калькулятор позволяет рассчитать стоимость печати листовок, флаеров, плакатов,
+                                обложек для дисков, наклеек, и другой полиграфической продукции, которая имеет
+                                листовой формат размером от А3 и меньше.
+                    .calc__tabs-box.box
+                        +format('Визитки 55х90 мм', 'от 200.00 Р.', '1.jpg')
+                        +format('Визитки 55х90 мм', 'от 200.00 Р.', '1.jpg')
+                        +format('Визитки 55х85 мм (ЕВРО)', 'от 200.00 Р.', '1.jpg')
+                        +format('Визитки 55х85 мм (ЕВРО)', 'от 200.00 Р.', '1.jpg')
+                        +format('Визитки 55х90 мм', 'от 200.00 Р.', '1.jpg')
+                        +format('Визитки 55х90 мм', 'от 200.00 Р.', '1.jpg')
+                    .calc__tabs-box.box
+                        .calc__maket
+                            p.calc__maket-txt_bold Особенности, которые необходимо учитывать при подготовке макета.
+                            p.calc__maket-title ФОРМАТ
+                            p.calc__maket-txt.
+                                Стандартный формат печатного листа (SRA3) 320x450 мм, максимальный размер запечатываемого
+                                поля 314х444 мм.
+                            p.calc__maket-txt.
+                                Максимально возможный формат печатного листа 330х480 мм (используется
+                                очень редко!), максимальный размер запечатываемого поля 324х474 мм.
+                            p.calc__maket-title ЭЛЕКТРОННЫЕ НОСИТЕЛИ
+                            p.calc__maket-txt.
+                                Макеты принимаются по электронной почте op-t@mail.ru или в офисе на USB-накопителях
+                                или CD/DVD дисках. Кроме макетов в печать, на носителях не должно быть никакой информации.
+                            p.calc__maket-title ОПИСАНИЕ ЗАКАЗА
+                            p.calc__maket-txt.
+                                Заказ описывается подробно, с указанием имени файла (если их несколько), размера,
+                                цветности, количества, типа бумаги, дополнительных работ (послепечатной обработки)
+                                и сроков, а так же контактной информации для связи в случае возникновения вопросов.
+                            p.calc__maket-txt_bold Например:
+                            p.calc__maket-txt.
+                                "Визитки 90х50 мм, 4+4, 100 шт, бумага мелованная 300 грамм, ламинирование 150 mic,
+                                скругление 4 углов, завтра к 16-00. Тел.: ..."
+                            p.calc__maket-txt.
+                                Если у Вас срочный заказ, напишите в теме письма "СРОЧНО", чтобы мы быстрее обратили
+                                на него внимание.
+                            p.calc__maket-title ВЕРСТКА
+                            p.calc__maket-txt.
+                                Располагайте макет по центру листа. Размер монтажной области должен быть равен
+                                обрезному формату макета + по 2 мм со всех сторон. Оборот кладите на следующий лист,
+                                а не рядом с лицом.
+                            p.calc__maket-title "ВЫЛЕТ ПОД ОБРЕЗ"
+                            p.calc__maket-txt.
+                                Если какой-либо элемент верстки подходит к краю ближе, чем на 3 мм, то он должен
+                                быть выпущен за обрез ("вылет под обрез"). Вынос за обрезной формат должен быть 2 мм,
+                                для многостраничных изданий – 3 мм.
+                            p.calc__maket-title ШРИФТ
+                            p.calc__maket-txt.
+                                Перед отправкой макета, пожалуйста, убедитесь, что все шрифты переведены в "кривые".
+                                Хорошо читаемым текст получается обычно не менее 6pt. Технически возможно напечатать
+                                текст и меньшего размера - перед печатью лучше проконсультируйтесь с нами.
+                            p.calc__maket-title ЦВЕТ
+                            p.calc__maket-txt.
+                                В векторных макетах черный цвет ЧИСТЫЙ C-M-Y-K: 0-0-0-100. Для растровых макетов
+                                составной цвет суммарно не более 320%. Рекомендуем для верстки и просмотра использовать
+                                модель CMYK - U.S. Web Coated (SWOP) v2.
+                            p.calc__maket-title РАЗРЕШЕНИЕ
+                            p.calc__maket-txt_bold Для растровых макетов и рисунков внутри векторных макетов:
+                            ul.calc__maket-list
+                                li.calc__maket-list-item разрешение должно составлять 300 dpi (точек на дюйм)
+                                li.calc__maket-list-item масштаб 100%!
+                                li.calc__maket-list-item векторные эффекты теней и т.п. должны быть растрированы!
+                            p.calc__maket-title ФОЛЬГИРОВАНИЕ
+                            p.calc__maket-txt.
+                                Макеты принимаются только в формате .cdr, шрифты в кривых. Все элементы под
+                                фольгирование должны быть100% Black (C-M-Y-K: 0-0-0-100). Минимальная толщина линий
+                                любых элементов должна быть не менее 0,2 мм.
+                            p.calc__maket-title ПАРАМЕТРЫ ФАЙЛОВ ДЛЯ СОХРАНЕНИЯ
+                            p.calc__maket-txt.
+                                <span class="calc__maket-txt_bold">Photoshop</span> - расширение или формат: *.TIFF,
+                                *.PSD, *.JPEG - модель CMYK, слои слиты, 300 dpi.
+                            p.calc__maket-txt.
+                                <span class="calc__maket-txt_bold">CorelDraw</span> - версия программы X5 и ниже,
+                                расширение или формат: .cdr
+                            p.calc__maket-txt.
+                                <span class="calc__maket-txt_bold">Illustrator и InDesign</span> - PDF - без сжатия,
+                                шрифты в кривых.
+                            p.calc__maket-title MICROSOFT OFFICE
+                            p.calc__maket-txt.
+                                Макеты, созданные средствами пакета Microsoft Office (Word, PowerPoint, Publisher
+                                и т.д.) - к печати не принимаются. В этих программах начиная с версии Microsoft
+                                Office 2007 есть возможность сохранить файл в формате PDF - такой формат приемлем
+                                для печати.
+                            p.calc__maket-example-title.
+                                ПРИМЕР ПОДГОТОВКИ МАКЕТА С НЕОБХОДИМЫМИ ОТСТУПАМИ<br>
+                                ПОД ОБРЕЗ И РАСПОЛОЖЕНИЕМ ЭЛЕМЕНТОВ
+                            img.calc__maket-example-img(src="assets/images/maket_example.jpg")

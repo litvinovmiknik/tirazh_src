@@ -1,0 +1,50 @@
+.reviews-home
+    size 100% auto
+    background-color light_gray
+    padding 50px 0
+
+    &_center
+        size 1200px 100%
+        margin 0 auto
+        clearfix()
+        +below(1220px)
+            width 100%
+
+    &__left
+        size 905px 100%
+        float left
+        +below(1220px)
+            float none
+            margin 0 auto
+        +below(925px)
+            width 100%
+
+    &__slider
+        height auto!important
+
+    &__right
+        size 280px 100%
+        float right
+        +below(1220px)
+            float none
+            margin 20px auto
+
+    &__title
+        title()
+        +below(925px)
+            margin-left: 20px
+        +below(380px)
+            margin-bottom: 40px
+
+    &__more
+        margin-top: 25px
+        +below(380px)
+            margin-top: 45px
+
+    .news-home
+
+        &__title
+            title()
+
+        &__more
+            margin-top: 75px

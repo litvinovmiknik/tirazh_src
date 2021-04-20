@@ -1,0 +1,57 @@
+.content
+    .content_center
+        .bascket
+            +breadcrumbs(['Главная', 'Корзина'])
+            +title-big('корзина')(class="bascket__title")
+            table.bascket__table
+                thead
+                    tr.bascket__row
+                        th.bascket__th
+                        th.bascket__th Товар
+                        th.bascket__th Цена
+                        th.bascket__th Тираж
+                        th.bascket__th Сумма
+                        th.bascket__th Удалить
+                tr.bascket__row
+                    td.bascket__cell
+                        img.bascket__img(src="assets/images/card-product/1_thumb.jpg")
+                    td.bascket__cell(data-label="Товар")
+                        p.bascket__product-name цифровая печать визиток
+                        p.bascket__product-type Односторонняя
+                        p.bascket__product-material
+                            | Бумага:
+                            span.bascket__product-material_bold Мелованная бумага
+                    td.bascket__cell(data-label="Цена") 2.00 Р.
+                    td.bascket__cell(data-label="Тираж")
+                        +spinner()(class="bascket__spinner")
+                    td.bascket__cell(data-label="Сумма") 200.00 Р.
+                    td.bascket__cell(data-label="Удалить")
+                        img.bascket__delete(src="assets/images/delete_icon.png")
+                tr.bascket__row
+                    td.bascket__cell
+                        img.bascket__img(src="assets/images/card-product/3_thumb.jpg")
+                    td.bascket__cell(data-label="Товар")
+                        p.bascket__product-name тиснение визиток
+                        p.bascket__product-type Односторонняя
+                        p.bascket__product-material
+                            | Бумага:
+                            span.bascket__product-material_bold Мелованная бумага
+                    td.bascket__cell(data-label="Цена") 7.00 Р.
+                    td.bascket__cell(data-label="Тираж")
+                        +spinner()(class="bascket__spinner")
+                    td.bascket__cell(data-label="Сумма") 2100.00 Р.
+                    td.bascket__cell(data-label="Удалить")
+                        img.bascket__delete(src="assets/images/delete_icon.png")
+            .bascket__do
+                +more-btn('очистить корзину')(class="bascket__clear-btn")
+                .bascket__total-wrap
+                    p.bascket__sum
+                        span.bascket__sum-desc Товаров на сумму:
+                        span.bascket__sum_bold 2300.00 Р.
+                    p.bascket__discount
+                        span.bascket__discount-desc Скидка
+                        span.bascket__discount_bold 0%
+                    p.bascket__total
+                        span.bascket__total-desc итого:
+                        span.bascket__total_orange 2300.00 Р.
+                        +orange-btn('оформить заказ')(class="bascket__total-btn")

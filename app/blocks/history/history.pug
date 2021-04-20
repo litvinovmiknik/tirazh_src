@@ -1,0 +1,55 @@
+.content
+    .content_center
+        .history
+            +breadcrumbs(['Главная', 'Личный кабинет', 'История заказов'])
+            +title-big('История заказов')(class="history__title")
+            table.history__table
+                thead.history__thead
+                    tr.history__row
+                        th.history__th Номер и дата Заказов
+                        th.history__th Кол-во товаров в заказе
+                        th.history__th Статус заказа
+                        th.history__th Сумма заказа руб.
+                        th.history__th Действие над заказом
+                tr.history__row
+                    td.history__cell(data-label="Номер и дата Заказов")
+                        p.history__number Заказ № 111
+                        p.history__date от 13.12.2016
+                    td.history__cell(data-label="Кол-во товаров в заказе") 3 товара
+                    td.history__cell(data-label="Статус заказа")
+                        p.history__status-wait-pay Ожидает оплаты
+                    td.history__cell(data-label="Сумма заказа руб.") 2300.00 Р.
+                    td.history__cell(data-label="Действие над заказом")
+                        +orange-btn('оплатить')(class="history__btn")
+                        +cancel-btn('отменить')(class="history__cancel-btn")
+                tr.history__row
+                    td.history__cell(data-label="Номер и дата Заказов")
+                        p.history__number Заказ № 111
+                        p.history__date от 13.12.2016
+                    td.history__cell(data-label="Кол-во товаров в заказе") 1 товар
+                    td.history__cell(data-label="Статус заказа")
+                        p.history__status-wait-get Ожидает получения
+                    td.history__cell(data-label="Сумма заказа руб.") 1800.00 Р.
+                    td.history__cell(data-label="Действие над заказом")
+                        +done-btn('оплачено')(class="history__done-btn")
+                        +cancel-btn('отменить')(class="history__cancel-btn")
+                tr.history__row
+                    td.history__cell(data-label="Номер и дата Заказов")
+                        p.history__number Заказ № 111
+                        p.history__date от 13.12.2016
+                    td.history__cell(data-label="Кол-во товаров в заказе") 2 товара
+                    td.history__cell(data-label="Статус заказа")
+                        p.history__status-geted Получен
+                    td.history__cell(data-label="Сумма заказа руб.") 3100.00 Р.
+                    td.history__cell(data-label="Действие над заказом")
+                        +border-btn('повторить заказ')(class="history__border-btn")
+                tr.history__row
+                    td.history__cell(data-label="Номер и дата Заказов")
+                        p.history__number Заказ № 111
+                        p.history__date от 13.12.2016
+                    td.history__cell(data-label="Кол-во товаров в заказе") 2 товара
+                    td.history__cell(data-label="Статус заказа")
+                        p.history__status-geted Получен
+                    td.history__cell(data-label="Сумма заказа руб.") 3100.00 Р.
+                    td.history__cell(data-label="Действие над заказом")
+                        +border-btn('повторить заказ')(class="history__border-btn")

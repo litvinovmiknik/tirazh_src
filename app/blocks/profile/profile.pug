@@ -1,0 +1,29 @@
+.content
+    .content_center
+        .profile
+            +breadcrumbs(['Главная', 'Регистрационные данные'])
+            +title-big('Регистрационные данные')(class="profile__title")
+            form.profile__form(action="#" method="post")
+                .profile__list-wrap
+                    .profile__item
+                        +title-mid('Персональные данные')(class="profile__title-mid")
+                        label.profile__label Ф.И.О.
+                        +input()(class="profile__input")
+                        label.profile__label Телефон
+                        +input()(class="profile__input")
+                    .profile__item
+                        +title-mid('Адрес доставки')(class="profile__title-mid")
+                        label.profile__label Населенный пункт
+                        +input()(class="profile__input")
+                        label.profile__label Индекс
+                        +input()(class="profile__input")
+                        label.profile__label Адрес доставки
+                        +input()(class="profile__input")
+                    .profile__item
+                        +title-mid('Данные авторизации')(class="profile__title-mid")
+                        label.profile__label Электронная почта (Логин)
+                        +input()(class="profile__input")
+                        label.profile__label Пароль
+                        +input()(class="profile__input")
+                        label.profile__label Подтверждение пароля
+                        +input()(class="profile__input")

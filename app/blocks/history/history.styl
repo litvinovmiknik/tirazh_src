@@ -1,0 +1,125 @@
+.history
+    padding-bottom: 20px
+
+    &__title
+        margin-top: 15px
+        +below(1220px)
+            margin-left: 10px
+
+    &__table
+        margin-top: 20px
+        width 100%
+
+    &__thead
+        +below(620px)
+            display: none
+
+    &__th
+        background-color light_blue
+        padding 10px 0
+        font 14px PantonBold
+        color #fff
+        width 200px
+        text-align: center
+
+        &:first-child
+            text-align left
+            padding-left: 25px
+            box-sizing border-box
+
+    &__row
+        background-color #fff
+
+        &:nth-child(even)
+            +below(620px)
+                background-color lighten(gray, 80%)
+
+    &__cell
+        height 82px
+        text-align: center
+        border-bottom 2px solid light_gray
+        +below(620px)
+            height auto
+            display: block
+            text-align: right
+            font-size: 13px
+            border: 0
+            width: 100%
+            padding 20px 10px
+            box-sizing border-box
+
+        &:before
+            +below(620px)
+                content attr(data-label)
+                float left
+                font 14px PantonBold
+                color dark_blue
+
+        &:first-child
+            text-align left
+            padding-left: 25px
+            box-sizing border-box
+            +below(620px)
+                padding: 10px
+                text-align: right
+
+        &:nth-child(2)
+            font 14px PantonRegular
+            color dark_blue
+
+        &:nth-child(4)
+            font 18px PantonBold
+            color dark_blue
+
+    &__row > th:first-child
+        border-top-left-radius 3px
+
+    &__row > th:last-child
+        border-top-right-radius 3px
+
+    &__row:last-child > td:first-child
+        border-bottom-left-radius 3px
+
+    &__row:last-child > td:last-child
+        border-bottom-right-radius 3px
+
+    &__number
+        font 14px PantonBold
+        color light_blue
+
+    &__date
+        font 14px PantonRegular
+        color gray
+        margin-top: 5px
+
+    &__status-wait-pay
+        font 14px PantonRegular
+        color orange
+
+    &__status-wait-get
+        font 14px PantonRegular
+        color #69b165
+
+    &__status-geted
+        font 14px PantonRegular
+        color gray
+
+    &__btn
+        width 103px!important
+        display: inline-block!important
+        font-size 12px!important
+        margin 3px!important
+
+    &__cancel-btn
+        width 103px
+        display: inline-block!important
+        margin 3px!important
+
+    &__done-btn
+        width 103px!important
+        display: inline-block!important
+        margin 3px!important
+
+    &__border-btn
+        width 148px!important
+        display: inline-block!important

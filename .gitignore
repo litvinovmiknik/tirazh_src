@@ -1,0 +1,28 @@
+# Node.js
+node_modules
+npm-debug.log
+
+# Bower
+bower_components
+
+# Git
+.git
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Extensions
+*.log
+*.zip
+*.gz
+*.exe
+*.pdf
+*.swp
+
+# Editor folders
+.idea
+
+# Project folders & files
+.publish
+dist

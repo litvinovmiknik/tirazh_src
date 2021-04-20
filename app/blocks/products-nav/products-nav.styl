@@ -1,0 +1,58 @@
+.products-nav
+    size 100% auto
+    background-color #fff
+    +below(1220px)
+        height auto
+
+    &_center
+        size 1200px 100%
+        margin 0 auto
+        text-align: center
+        +below(1220px)
+            width 100%
+
+    &__list
+        list-style none
+        height auto
+        font-size 0
+        display table
+        margin 0 auto
+        +below(1220px)
+            display: none
+
+    .slicknav_menu
+        +below(1220px)
+            display: block
+
+    .slicknav_nav li
+        display: block
+        max-width 100%!important
+
+    .slicknav_nav a
+        height auto
+        text-align left
+        margin-bottom: 10px
+
+    .slicknav_menu .slicknav_menutxt
+        font 14px PantonRegular
+        color #fff
+        text-shadow none
+
+    &__item
+        max-width 149px
+        display inline-block
+
+    &__link
+        display table-cell
+        font 12px PantonBold
+        color light_blue
+        text-decoration: none
+        text-transform: uppercase
+        padding 0 36px
+        height 65px
+        vertical-align: middle
+        text-align: center
+
+        &:hover
+            background-color orange
+            color #fff

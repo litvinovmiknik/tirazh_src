@@ -1,0 +1,141 @@
+.logobar
+    size 100% 109px
+    background-color light_gray
+    +below(1220px)
+        height auto
+        padding-bottom: 20px
+
+    &_center
+        size 1200px 100%
+        margin 0 auto
+        clearfix()
+        +below(1220px)
+            width 100%
+
+.logo
+    display: inline-block
+    vertical-align: top
+    margin-top: 12px
+    border none
+    +below(1220px)
+        margin-left: 20px
+    +below(380px)
+        width 90%
+
+    &__link
+        text-decoration: none
+
+.phone
+    display: inline-block
+    vertical-align: top
+    margin 35px 0 0 30px
+    +below(380px)
+        margin-left: 10px
+
+    &__number
+        font 18px PantonRegular
+        color light_blue
+
+        &_orange
+            color orange
+            margin-right: 9px
+
+    &__icon
+        display: inline-block
+        margin 35px 0 0 10px
+
+.callback-btn
+    display: inline-block
+    vertical-align: top
+    margin 35px 0 0 15px
+    size 147px 42px
+    background-color #fff
+    border-radius 3px
+    border none
+    outline none
+    cursor pointer
+    font 12px PantonBold
+    color light_blue
+    text-transform: uppercase
+    +below(380px)
+        margin-left: 10px
+
+    &:hover
+        color orange
+        box-shadow 0 0 20px 0 rgba(0,0,0,.1)
+
+.address
+    display: inline-block
+    vertical-align: top
+    margin 35px 0 0 30px
+    +below(1220px)
+        margin-bottom: 30px
+    +below(380px)
+        margin-left: 10px
+
+    &__icon
+        float left
+
+    &__txt
+        font 14px PantonRegular
+        color light_blue
+        margin-left: 50px
+        line-height 20px
+
+.bascket-mini
+    float right
+    display: inline-block
+    vertical-align: top
+    margin 25px 10px 0 35px
+    position: relative
+    text-decoration: none
+    +below(380px)
+        margin-left: 10px
+
+    &__icon-wrap
+        size 60px
+        float left
+        background-color #fff
+        border-radius 60px
+        text-align: center
+        position relative
+        z-index 5
+
+    &__icon
+        display: inline-block
+        size 31px 34px
+        background-image url(../images/bascket.png)
+        background-repeat no-repeat
+        background-position top
+        margin-top: 13px
+
+    &:hover &__icon
+        background-position bottom
+
+    &__count
+        size 28px 22px
+        padding-top: 4px
+        border-radius 28px
+        background-color light_blue
+        font 14px PantonBold
+        color #fff
+        position absolute
+        top -7px
+        left 50px
+        z-index 4
+        text-align: center
+
+    &__name
+        font 12px PantonBold
+        color #c6cad3
+        text-transform: uppercase
+        margin 10px 0 0 90px
+
+    &__cost
+        font 18px PantonBold
+        color #484b52
+        margin 5px 0 0 90px
+
+        &_orange
+            color orange
+            margin-right: 5px

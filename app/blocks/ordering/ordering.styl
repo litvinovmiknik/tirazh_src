@@ -1,0 +1,222 @@
+.ordering
+    clearfix()
+    &__title
+        margin-top: 20px
+        +below(1220px)
+            margin-left: 10px
+    &__left
+        size 888px auto
+        float left
+        margin-right: 20px
+        margin-top: 20px
+        +below(1220px)
+            float none
+        +below(920px)
+            width 100%
+    &__right
+        size 292px auto
+        float left
+        margin-top: 20px
+        margin-bottom: 20px
+        +below(1220px)
+            float none
+            margin-left: 10px
+        +below(340px)
+            width 260px
+    &__table
+        width 100%
+        border-spacing 0 2px
+    &__th
+        width 100%
+        padding 10px 0
+        border-top-left-radius 3px
+        border-top-right-radius 3px
+        padding-left: 20px
+    &__row
+        background-color #fff
+        &:nth-child(even)
+            +below(620px)
+                background-color lighten(gray, 80%)
+    &__cell
+        height 146px
+        text-align: left
+        padding-left: 20px
+        box-sizing border-box
+        +below(620px)
+            height auto
+            display: block
+            font-size: 13px
+            border: 0
+            width: 100%
+            padding 20px 10px
+        &:first-child
+            width 10%
+            +below(620px)
+                width 100%
+        &:nth-child(2)
+            width 60%
+            +below(620px)
+                width 100%
+        &:nth-child(3)
+            width 10%
+            text-align: center
+            font 18px PantonRegular
+            color gray
+            +below(620px)
+                width 100%
+                text-align left
+        &:last-child
+            width 20%
+            text-align: center
+            font 18px PantonBold
+            color dark_blue
+            +below(620px)
+                width 100%
+                text-align left
+    &__product-name
+        font 14px PantonBold
+        color dark_blue
+        text-transform: uppercase
+    &__product-type
+        font 14px PantonBold
+        color gray
+        margin 5px 0
+    &__product-edition
+        font 14px PantonRegular
+        color gray
+        &_bold
+            font-family PantonBold
+            margin-left: 5px
+    &__product-material
+        font 14px PantonRegular
+        color gray
+        &_bold
+            font-family PantonBold
+            margin-left: 5px
+    /* Адрес доставки */
+    &__address
+        size 100% auto
+        padding 20px
+        background-color #fff
+        box-sizing border-box
+        margin-top: 20px
+    &__address-title
+        margin-bottom: 20px
+    &__address-city
+        width 260px!important
+        margin-right: 20px!important
+        margin-bottom: 0!important
+        display: inline-block!important
+        +below(920px)
+            margin-bottom: 20px!important
+    &__address-street
+        width 564px!important
+        margin-bottom: 0!important
+        display: inline-block!important
+        +below(620px)
+            width 100%!important
+    &__delivery, &__pay
+        size 100% auto
+        padding 20px
+        background-color #fff
+        box-sizing border-box
+        margin-top: 20px
+        clearfix()
+    &__delivery-title, &__pay-title
+        margin-bottom: 20px
+    &__delivery-radio, &__pay-radio
+        margin-bottom: 10px
+    &__delivery-name, &__pay-name
+        float left
+        +below(800px)
+            float none
+    &__delivery-desc, &__pay-desc
+        float right
+        padding-left: 30px
+        border-left 1px solid #e7e7e9
+        display: block
+        width 490px
+        height 100%
+        box-sizing border-box
+        +below(800px)
+            width auto
+            float none
+            padding-left: 0
+            border-left none
+            margin-top: 20px
+    &__delivery-desc-title, &__pay-desc-title
+        font 14px PantonBold
+        color gray
+        text-transform: uppercase
+        margin-bottom: 10px
+    &__delivery-desc-txt, &__pay-desc-txt
+        font 14px PantonRegular
+        line-height 24px
+        color gray
+        &_bold
+            font-family PantonBold
+    &__contacts
+        size 100% auto
+        padding 20px
+        background-color #fff
+        box-sizing border-box
+        margin-top: 20px
+        clearfix()
+    &__contacts-title
+        margin-bottom: 20px
+    &__contacts-input
+        width 269px!important
+        margin-right: 20px!important
+        float left
+    &__contacts-phone
+        margin-right: 0!important
+    &__textarea
+        size 100% 88px
+        background-color light_gray
+        border-radius 3px
+        border 1px solid #e7e7e9
+        padding-top: 13px
+        padding-left: 13px
+        font 14px PantonRegular
+        color dark_blue
+        outline none
+        box-sizing border-box
+    &__sum
+        font 16px PantonRegular
+        color dark_blue
+        margin-bottom: 5px
+    &__sum-title
+        display: inline-block
+        width 150px
+    &__sum-value
+        font-family PantonBold
+    &__deli
+        font 16px PantonRegular
+        color dark_blue
+        margin-bottom: 5px
+    &__deli-title
+        display: inline-block
+        width 150px
+    &__deli-value
+        font-family PantonBold
+    &__discount
+        font 16px PantonRegular
+        color dark_blue
+        margin-bottom: 5px
+    &__discount-title
+        display: inline-block
+        width 150px
+    &__discount-value
+        font-family PantonBold
+    &__total
+        font 24px PantonBold
+        color dark_blue
+        margin 15px 0 20px 0
+    &__total-title
+        display: inline-block
+        width 150px
+        text-transform: uppercase
+    &__total-value
+        color orange
+    &__button
+        font-size 16px

@@ -1,0 +1,10 @@
+.content
+    .content_center
+        +breadcrumbs(['Главная', 'Оформление подписки'])
+        .sub
+            +title-big('Оформление подписки')(class="sub__title")
+            form.sub__form(action="#" method="post")
+                +input('email', 'email', 'E-mail')
+                +checkbox('discount', 'discount', 'Получать информацию об Акциях')(class="sub__checkbox")
+                +checkbox('new-product', 'new-product', 'Получать информацию о новых товарах')(class="sub__checkbox")
+                +orange-btn('Оформить подписку')(class="sub__button")

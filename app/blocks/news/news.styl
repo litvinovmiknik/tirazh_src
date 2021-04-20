@@ -1,0 +1,22 @@
+.news
+    &__title
+        margin 20px 0
+        +below(1220px)
+            margin-left: 10px
+    &__list-wrap
+        clearfix()
+        +below(1220px)
+            text-align: center
+        .new
+            margin 0 28px 20px -5px
+            +below(1220px)
+                margin 0 10px 20px
+                text-align left
+            &:nth-child(4n+1)
+                margin-left: 0
+                +below(1220px)
+                    margin-left: 10px
+            &:nth-child(4n+4)
+                margin-right: 0
+                +below(1220px)
+                    margin-right: 10px

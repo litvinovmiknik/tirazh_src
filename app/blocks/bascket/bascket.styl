@@ -1,0 +1,187 @@
+.bascket
+    padding-bottom: 20px
+
+    &__title
+        margin-top: 15px
+        +below(1220px)
+            margin-left: 10px
+
+    &__table
+        margin-top: 20px
+        width 100%
+
+        thead
+            +below(620px)
+                display: none
+
+    &__th
+        background-color light_blue
+        padding 10px 0
+        font 14px PantonBold
+        color #fff
+        width 200px
+        text-align: center
+
+    &__row
+        background-color #fff
+
+        &:nth-child(even)
+            +below(620px)
+                background-color lighten(gray, 80%)
+
+    &__row > th:first-child
+        width 150px
+        border-top-left-radius 3px
+
+    &__row > th:nth-child(2)
+        box-sizing border-box
+        text-align left
+        padding-left: 40px
+
+    &__row > th:last-child
+        border-top-right-radius 3px
+
+    &__cell
+        height 146px
+        text-align: center
+        border-bottom 2px solid light_gray
+        +below(620px)
+            height auto
+            display: block
+            text-align: right
+            font-size: 13px
+            border: 0
+            width: 100%
+            padding 20px 10px
+            box-sizing border-box
+
+        &:first-child
+            +below(620px)
+                text-align: center
+
+    &__cell:before
+        +below(620px)
+            content attr(data-label)
+            float left
+            font 14px PantonBold
+            color dark_blue
+
+    &__row > td:nth-child(2)
+        text-align left
+        +below(620px)
+            text-align right
+
+    &__spinner
+        margin 0 auto
+        +below(620px)
+            margin-right: 0
+
+    &__row > td:nth-child(3)
+        font 18px PantonBold
+        color dark_blue
+
+    &__row > td:nth-child(5)
+        font 18px PantonBold
+        color orange
+
+    &__row:last-child > td:first-child
+        border-bottom-left-radius 3px
+
+    &__row:last-child > td:last-child
+        border-bottom-right-radius 3px
+
+    &__product-name
+        font 14px PantonBold
+        color dark_blue
+        text-transform: uppercase
+
+    &__product-type
+        font 14px PantonBold
+        color gray
+        margin 5px 0
+
+    &__product-material
+        font 14px PantonRegular
+        color gray
+
+        &_bold
+            font-family PantonBold
+            margin-left: 5px
+
+    &__delete
+        cursor pointer
+
+    &__do
+        width 100%
+        margin-top: 20px
+        clearfix()
+
+    &__clear-btn
+        float left
+        text-transform: uppercase
+        font-size 12px!important
+        +below(1220px)
+            margin-left: 10px!important
+        +below(720px)
+            float none
+
+    &__total-wrap
+        width 480px
+        float right
+        +below(1220px)
+            margin-right: 10px
+        +below(720px)
+            width auto
+            margin-right: 0
+            margin-left: 10px
+            margin-top: 20px
+            float none
+
+    &__total-btn
+        width 168px!important
+        float right
+        +below(720px)
+            float none
+            margin-left: 0!important
+            margin-top: 20px!important
+
+    &__sum
+        font 16px PantonRegular
+        color dark_gray
+
+        &_bold
+            font-family PantonBold
+
+    &__sum-desc
+        display: inline-block
+        vertical-align: top
+        width 160px
+
+    &__discount
+        font 16px PantonRegular
+        color dark_gray
+        margin-top: 3px
+
+        &_bold
+            font-family PantonBold
+
+    &__discount-desc
+        display: inline-block
+        vertical-align: top
+        width 160px
+
+    &__total
+        font 24px PantonBold
+        text-transform: uppercase
+        color dark_gray
+        margin-top: 10px
+
+        &_orange
+            display: inline-block
+            vertical-align: middle
+            color orange
+
+    &__total-desc
+        display: inline-block
+        vertical-align: middle
+        width 160px

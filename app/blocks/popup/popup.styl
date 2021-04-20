@@ -1,0 +1,36 @@
+.popup
+    display none
+
+    &__bg
+        size 100%
+        background-color rgba(0,0,0,0.7)
+        position fixed
+        top 0
+        left 0
+        z-index 10
+
+    &__content
+        size 366px auto
+        padding 30px
+        border-radius 3px
+        background-color #fff
+        position fixed
+        top 100px
+        left 0
+        right 0
+        margin auto
+        z-index 11
+        +below(460px)
+            width 75%
+
+    &__title
+        title()
+
+    &__close
+        position absolute
+        top 30px
+        right 30px
+        cursor pointer
+        +below(380px)
+            top 5px
+            right 5px

@@ -1,0 +1,90 @@
+.content
+    .content_center
+        .ordering
+            +breadcrumbs(['Главная', 'Оформление заказа'])
+            +title-big('оформление заказа')(class="ordering__title")
+            form.ordering__form(action="#" method="post")
+                .ordering__left
+                    table.ordering__table
+                        thead.ordering__thead
+                            tr.ordering__row
+                                th.ordering__th(colspan="4")
+                                    +title-mid('товары в заказе')
+                        tr.ordering__row
+                            td.ordering__cell
+                                img(src="assets/images/card-product/1_thumb.jpg")
+                            td.ordering__cell
+                                p.ordering__product-name цифровая печать визиток
+                                p.ordering__product-type Односторонняя
+                                p.ordering__product-edition
+                                    | Тираж:
+                                    span.ordering__product-edition_bold 100 шт.
+                                p.ordering__product-material
+                                    | Бумага:
+                                    span.ordering__product-material_bold Мелованная бумага
+                            td.ordering__cell 1 шт.
+                            td.ordering__cell 200.00 Р.
+                        tr.ordering__row
+                            td.ordering__cell
+                                img(src="assets/images/card-product/3_thumb.jpg")
+                            td.ordering__cell
+                                p.ordering__product-name цифровая печать визиток
+                                p.ordering__product-type Односторонняя
+                                p.ordering__product-edition
+                                    | Тираж:
+                                    span.ordering__product-edition_bold 100 шт.
+                                p.ordering__product-material
+                                    | Бумага:
+                                    span.ordering__product-material_bold Мелованная бумага
+                            td.ordering__cell 1 шт.
+                            td.ordering__cell 200.00 Р.
+                    .ordering__address
+                        +title-mid('адрес доставки')(class="ordering__address-title")
+                        +input('text', 'city', 'Населенный пункт')(class="ordering__address-city")
+                        +input('text', 'street', 'Ваш адрес доставки: улица, дом, квартира')(class="ordering__address-street")
+                    .ordering__delivery
+                        +title-mid('способ доставки')(class="ordering__delivery-title")
+                        .ordering__delivery-name
+                            +radio('delivery1', 'deliverry', 'Доставка курьером (200 руб.)')(class="ordering__delivery-radio")
+                            +radio('delivery2', 'deliverry', 'Почта России')(class="ordering__delivery-radio")
+                            +radio('delivery3', 'deliverry', 'CheckOut.ru')(class="ordering__delivery-radio")
+                            +radio('delivery4', 'deliverry', 'Служба доставки 2')(class="ordering__delivery-radio")
+                            +radio('delivery5', 'deliverry', 'Самовывоз')(class="ordering__delivery-radio")
+                        .ordering__delivery-desc
+                            p.ordering__delivery-desc-title доставка курьером
+                            p.ordering__delivery-desc-txt.
+                                Доставка осуществляется только по Москве, в пределах МКАД.<br>
+                                <span class="ordering__delivery-desc-txt_bold">Стоимость доставки:</span> 200 руб.<br>
+                                <span class="ordering__delivery-desc-txt_bold">Срок:</span> 1-2 дня
+                    .ordering__pay
+                        +title-mid('способ оплаты')(class="ordering__pay-title")
+                        .ordering__pay-name
+                            +radio('pay1', 'pay', 'Наличными курьеру')(class="ordering__pay-radio")
+                            +radio('pay2', 'pay', 'Оплата картой')(class="ordering__pay-radio")
+                            +radio('pay3', 'pay', 'Робокасса')(class="ordering__pay-radio")
+                            +radio('pay4', 'pay', 'Яндекс.Деньги')(class="ordering__pay-radio")
+                            +radio('pay5', 'pay', 'WebMoney')(class="ordering__pay-radio")
+                        .ordering__pay-desc
+                            p.ordering__pay-desc-title наличными курьеру
+                            p.ordering__pay-desc-txt.
+                                Оплата производится наличными, в рублях курьеру при получении товара по адресу доставки.
+                    .ordering__contacts
+                        +title-mid('Контакты')(class="ordering__contacts-title")
+                        +input('text', 'username', 'Ф.И.О.')(class="ordering__contacts-input")
+                        +input('text', 'email', 'E-mail')(class="ordering__contacts-input")
+                        +input('text', 'phone', 'Телефон')(class="ordering__contacts-input ordering__contacts-phone")
+                        textarea.ordering__textarea(placeholder="Комментарий к заказу")
+                .ordering__right
+                    p.ordering__sum
+                        span.ordering__sum-title Товаров на сумму:
+                        span.ordering__sum-value 2300.00 Р.
+                    p.ordering__deli
+                        span.ordering__deli-title Доставка:
+                        span.ordering__deli-value 200.00 Р.
+                    p.ordering__discount
+                        span.ordering__discount-title Скидка:
+                        span.ordering__discount-value 0%
+                    p.ordering__total
+                        span.ordering__total-title Итого:
+                        span.ordering__total-value 2300.00 Р.
+                    +orange-btn('оформить заказ')(class="ordering__button")

@@ -1,0 +1,22 @@
+.reviews
+    &__title
+        margin 20px 0
+        +below(1220px)
+            margin-left: 10px
+    &__list-wrap
+        +below(1220px)
+            text-align: center
+        .review
+            display: inline-block
+            vertical-align: top
+            margin 0 28px 28px -5px
+            +below(1220px)
+                margin 0 10px 20px
+            &:nth-child(4n+1)
+                margin-left: 0
+                +below(1220px)
+                    margin-left: 10px
+            &:nth-child(4n+4)
+                margin-right: 0
+                +below(1220px)
+                    margin-right: 10px

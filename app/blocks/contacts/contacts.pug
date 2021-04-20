@@ -1,0 +1,45 @@
+.content
+    .content_center
+        .contacts
+            +breadcrumbs(['Главная', 'Контакты'])
+            +title-big('Контакты')(class="contacts__title")
+            .contacts__left
+                p.contacts__company Оперативная полиграфия "Тираж"
+                p.contacts__boss Индивидуальный предприниматель Руденко Александр Валерьевич
+                .contacts__address
+                    p.contacts__address-title Адрес:
+                    p.contacts__address-txt 355042, г. Ставрополь, ул. 50 лет ВЛКСМ, 24 б
+                .contacts__phone
+                    p.contacts__phone-title Телефоны:
+                    p.contacts__phone-txt +7 (8652) 72-11-21,  +7 (8652) 72-47-73,  +7 (8652) 31-53-97
+                .contacts__email
+                    span.contacts__email-title E-mail:
+                    span.contacts__email-txt op-t@mail.ru
+                .contacts__get-order
+                    p.contacts__get-order-title Прием заказов:
+                    p.contacts__get-order-txt.
+                        пн.-пт.: с 9:00 до 18:00 <span class="contacts__get-order-txt_gray">- без перерыва</span>
+                        <br>сб.-вс.: выходной
+                .contacts__set-order
+                    p.contacts__set-order-title Выдача заказов:
+                    p.contacts__set-order-txt.
+                        пн.-пт.: с 8:00 до 19:00 <span class="contacts__set-order-txt_gray">- без перерыва</span><br>
+                        сб.: с 8:00 до 19:00 <span class="contacts__set-order-txt_gray">- перерыв c 13:00 до
+                        14:00</span><br>вс.: выходной
+            .contacts__right
+                +title-mid('обратная связь')
+                form.contacts__form(action="#" method="post")
+                    p.contacts__input-wrap.contacts__username-wrap
+                        label.contacts__label Ф.И.О. <span class="contacts__label_orange">*</span>
+                        +input()(class="contacts__input")
+                    p.contacts__input-wrap.contacts__email-wrap
+                        label.contacts__label E-mail <span class="contacts__label_orange">*</span>
+                        +input()(class="contacts__input")
+                    p.contacts__textarea-wrap
+                        label.contacts__label Текст сообщения <span class="contacts__label_orange">*</span>
+                        textarea.contacts__textarea
+                    p.contacts__input-wrap
+                        label.contacts__label Введите проверочное слово <span class="contacts__label_orange">*</span>
+                        +input()(class="contacts__input")
+                    img.contacts__captcha(src="assets/images/captcha.png")
+                    +orange-btn('отправить сообщение')(class="contacts__button")

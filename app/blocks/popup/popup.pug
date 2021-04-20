@@ -1,0 +1,9 @@
+.popup
+  .popup__bg
+  .popup__content
+    img.popup__close(src="assets/images/close.png" alt="")
+    h2.popup__title Обратный звонок
+    form.popup__form(action="#" method="post")
+      +input('text', 'name', 'Как вас зовут?')
+      +input('text', 'phone', 'Ваш номер телефона')
+      +orange-btn('заказать звонок')

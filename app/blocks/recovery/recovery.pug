@@ -1,0 +1,12 @@
+.content
+    .content_center
+        +breadcrumbs(['Главная', 'Восстановление пароля'])
+        .recovery
+            +title-big('Восстановление пароля')(class="recovery__title")
+            p.recovery__txt.
+                Пожалуйста, введите Ваш адрес электронной почты, на который будет выслана ссылка
+                для восстановления пароля
+            form.recovery__form(action="#" method="post")
+                +input('email', 'email', 'E-mail')
+                img.recovery__captcha(src="assets/images/recovery.jpg")
+                +orange-btn('отправить')

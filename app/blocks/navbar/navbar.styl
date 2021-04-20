@@ -1,0 +1,135 @@
+.navbar
+    size 100% 46px
+    background-color light_blue
+    clearfix()
+    +below(1220px)
+        height auto
+
+    &_center
+        size 1200px 100%
+        margin 0 auto
+        +below(1220px)
+            width 100%
+
+.slicknav_menu
+    display: none
+    background-color light_blue
+    +below(720px)
+        display: block
+
+.slicknav_btn
+    background-color orange
+
+.slicknav_icon
+    color #fff
+
+.slicknav_nav a
+    border-radius 0
+    border none
+
+    &:hover
+        border-radius 0
+        border none
+        background-color orange
+        color #fff
+
+.nav
+    float left
+    +below(1220px)
+        margin-left: 10px
+    +below(720px)
+        display: none
+
+    &__item
+        display: inline-block
+        margin-right: 20px
+        line-height 46px
+        +below(720px)
+            margin-right: 0
+
+    &__link
+        font 14px PantonRegular
+        color #c6cad3
+        text-decoration: none
+
+        &:hover
+            //font-family PantonBold
+            color #fff
+
+.cabinet-btn
+    display: block
+    float right
+    size 172px 46px
+    font 14px PantonBold
+    color #fff
+    text-decoration: none
+    background-color orange
+    text-align: center
+    line-height 46px
+    +below(460px)
+        width 100%
+
+    &:hover
+        background-color #ffa155
+
+.search
+    float right
+    size 267px 46px
+    position relative
+    +below(460px)
+        width 100%
+
+    &__input
+        size 221px 44px
+        padding-left 46px
+        outline none
+        border none
+        background-color dark_blue
+        color #fff
+        font 14px PantonRegular
+        +below(460px)
+            box-sizing border-box
+            width 100%
+
+        /*&::-webkit-input-placeholder
+            line-height 44px
+            color #878d9b
+            font 14px PantonRegular
+        &::-moz-placeholder
+            line-height 44px
+            color #878d9b
+            font 14px PantonRegular
+        &:-moz-placeholder
+            line-height 44px
+            color #878d9b
+            font 14px PantonRegular
+        &:-ms-input-placeholder
+            line-height 44px
+            color #878d9b
+            font 14px PantonRegular*/
+
+        &:focus::-webkit-input-placeholder
+            color transparent
+        &:focus::-moz-placeholder
+            color transparent
+        &:focus:-moz-placeholder
+            color transparent
+        &:focus:-ms-input-placeholder
+            color transparent
+
+    &__input:focus + &__button
+        background-position bottom
+
+    &__button
+        size 16px
+        background-color transparent
+        background-image url('../images/search_icon.png')
+        background-repeat no-repeat
+        background-position top
+        position absolute
+        top 14px
+        left 15px
+        padding 0
+        cursor pointer
+        border none
+        outline none

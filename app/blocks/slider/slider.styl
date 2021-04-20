@@ -1,0 +1,183 @@
+.slider
+    size 100% 429px
+    position: relative
+    clearfix()
+    +below(780px)
+        height auto
+
+    &__title
+        font 42px PantonBlack
+        color dark_blue
+        margin-top: 40px
+        position: relative
+        left 29%
+        +below(1680px)
+            left 22%
+        +below(1600px)
+            left 19%
+        +below(1536px)
+            left 17%
+        +below(1440px)
+            left 13%
+        +below(1400px)
+            left 11%
+        +below(1366px)
+            left 9%
+        +below(1280px)
+            left 5%
+        +below(1200px)
+            left 10px
+        +below(380px)
+            font-size 36px!important
+            margin-right: 20px
+
+    &__txt
+        font 16px PantonRegular
+        color dark_blue
+        margin-top: 30px
+        position: relative
+        left 29%
+        +below(1680px)
+            left 22%
+        +below(1600px)
+            left 19%
+        +below(1536px)
+            left 17%
+        +below(1440px)
+            left 13%
+        +below(1400px)
+            left 11%
+        +below(1366px)
+            left 9%
+        +below(1280px)
+            left 5%
+        +below(1200px)
+            left 10px
+        +below(380px)
+            margin-right: 20px
+
+    &__left
+        float left
+        size 65% 100%
+        background-repeat no-repeat
+        background-postion left
+        background-size cover
+        position: relative
+        +below(780px)
+            float none
+            width 100%
+            height 429px
+
+        .slidesjs-container
+            height 100%!important
+
+        .slidesjs-control
+            height 100%!important
+            z-index 2
+
+        .slidesjs-navigation
+            display inline-block
+            size 11px 18px
+            position absolute
+            bottom 45px
+            z-index 3
+            background-repeat no-repeat
+            background-position left
+            cursor pointer
+
+            &:hover
+                background-position right
+
+        .slidesjs-pagination
+            position absolute
+            bottom 50px
+            left 29%
+            z-index 3
+            list-style none
+            +below(1680px)
+                left 22%
+            +below(1600px)
+                left 19%
+            +below(1536px)
+                left 17%
+            +below(1440px)
+                left 13%
+            +below(1400px)
+                left 11%
+            +below(1366px)
+                left 9%
+            +below(1280px)
+                left 5%
+            +below(1200px)
+                left 10px
+
+        .slidesjs-pagination li
+            float left
+            margin 0 4px
+
+        .slidesjs-pagination li a
+            display block
+            width 9px
+            height 0
+            border-radius 9px
+            background-color #70777c
+            padding-top 9px
+            overflow hidden
+
+        .slidesjs-pagination li a.active,
+        .slidesjs-pagination li a:hover.active
+            width 11px
+            padding-top: 11px
+            margin-top: -1px
+            background-color orange
+
+    &__img
+        height 100%
+        background-repeat no-repeat!important
+        background-size cover!important
+
+    &__prev
+        background-image url(../images/slider/prev.png)
+        right 75px
+
+    &__next
+        background-image url(../images/slider/next.png)
+        right 45px
+
+    &__right
+        float right
+        size 35% 100%
+        background-image url('../images/slider/price_guarantee_bg.jpg')
+        background-repeat no-repeat
+        background-position right
+        background-size cover
+        +below(780px)
+            float none
+            width 100%
+            height 429px
+
+    &__title-right
+        font 42px PantonRegular
+        color #fff
+        text-transform: uppercase
+        margin 50px 0 0 50px
+        +below(780px)
+            margin-top: 0
+            padding-top: 50px
+        +below(380px)
+            margin-left: 10px
+
+        &_bold
+            font-family PantonBlack
+
+    &__txt-right
+        width 210px
+        font 16px PantonRegular
+        color #fff
+        margin 80px 0 0 50px
+        +below(380px)
+            margin-left: 10px
+
+    &__title
+        font 42px "PantonBlack"
+        color dark_blue

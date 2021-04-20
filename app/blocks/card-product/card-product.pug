@@ -1,0 +1,148 @@
+.content
+    .content_center
+        .card-product
+            +breadcrumbs(['Главная', 'Каталог', 'Визитки', 'Цифровая печать визиток'])
+            h2.card-product__title цифровая печать визиток
+            .card-product__left
+                ul.card-product__slider
+                    li.card-product__slider-item
+                        a.card-product__slider-hover(data-fancybox="card-product" href="assets/images/card-product/1.jpg")
+                        img.card-product__slider-img(src="assets/images/card-product/1.jpg")
+                    li.card-product__slider-item
+                        a.card-product__slider-hover(data-fancybox="card-product" href="assets/images/card-product/1.jpg")
+                        img.card-product__slider-img(src="assets/images/card-product/1.jpg")
+                    li.card-product__slider-item
+                        a.card-product__slider-hover(data-fancybox="card-product" href="assets/images/card-product/1.jpg")
+                        img.card-product__slider-img(src="assets/images/card-product/1.jpg")
+                    li.card-product__slider-item
+                        a.card-product__slider-hover(data-fancybox="card-product" href="assets/images/card-product/1.jpg")
+                        img.card-product__slider-img(src="assets/images/card-product/1.jpg")
+                .card-product__pager
+                    a.card-product__pager-link(data-slide-index="0" href="")
+                        span.card-product__pager-link_active
+                        img.card-product__pager-img(src="assets/images/card-product/1_thumb.jpg")
+                    a.card-product__pager-link(data-slide-index="1" href="")
+                        span.card-product__pager-link_active
+                        img.card-product__pager-img(src="assets/images/card-product/2_thumb.jpg")
+                    a.card-product__pager-link(data-slide-index="2" href="")
+                        span.card-product__pager-link_active
+                        img.card-product__pager-img(src="assets/images/card-product/3_thumb.jpg")
+                    a.card-product__pager-link(data-slide-index="3" href="")
+                        span.card-product__pager-link_active
+                        img.card-product__pager-img(src="assets/images/card-product/4_thumb.jpg")
+            .card-product__right
+                .card-product__cost
+                    h3.card-product__cost-title стоимость
+                    .card-product__cost-item
+                        p.card-product__cost-value 2.00 р.
+                        p.card-product__cost-desc за экземпляр
+                    .card-product__cost-item
+                        p.card-product__cost-value.card-product__cost-value_orange 200.00 р.
+                        p.card-product__cost-desc сумма
+                form.card-products__form(action="#" method="post" enctype="multipart/form-data")
+                    .card-product__tabs.tabs_block
+                        ul.card-product__tabs-head.tabs
+                            li.card-product__tabs-head-item.active детали
+                            li.card-product__tabs-head-item подробно
+                        .card-product__tabs-box.box.visible
+                            .card-product__side
+                                +title-small('Сторона')
+                                +radio-btn('side-one', 'side', 'Односторонние')(class="card-product__side-radio")
+                                +radio-btn('side-two', 'side', 'Двухсторонние')(class="card-product__side-radio")
+                            .card-product__edition
+                                +title-small('Тираж')
+                                +radio-btn('ed-100', 'edition', '100')(class="card-product__edition-radio")
+                                +radio-btn('ed-300', 'edition', '300')(class="card-product__edition-radio")
+                                +radio-btn('ed-500', 'edition', '500')(class="card-product__edition-radio")
+                                +radio-btn('ed-1000', 'edition', '1000')(class="card-product__edition-radio")
+                                +radio-btn('ed-1500', 'edition', '1500')(class="card-product__edition-radio")
+                                +radio-btn('ed-2000', 'edition', '2000')(class="card-product__edition-radio")
+                                +radio-btn('ed-2500', 'edition', '2500')(class="card-product__edition-radio")
+                                +radio-btn('ed-3000', 'edition', '3000')(class="card-product__edition-radio")
+                                +radio-btn('ed-4000', 'edition', '4000')(class="card-product__edition-radio")
+                            .card-product__paper
+                                +title-small('Бумага')
+                                .card-product__paper-radio-wrap
+                                    +radio('paper1', 'paper', 'Мелованная бумага')(class="card-product__paper-radio")
+                                    +radio('paper2', 'paper', 'Color Copy  300 г/м2')(class="card-product__paper-radio")
+                                    +radio('paper3', 'paper', 'Фактурная')(class="card-product__paper-radio")
+                                    +radio('paper4', 'paper', 'Металлизированная')(class="card-product__paper-radio")
+                                    +radio('paper5', 'paper', 'Galaxy Metallic')(class="card-product__paper-radio")
+                                    +radio('paper6', 'paper', 'Touche Cover')(class="card-product__paper-radio")
+                            .card-product__paper-color
+                                +title-small('Цветность бумаги')
+                                .card-product__paper-color-wrap
+                                    +radio-color('color1', 'color', '1.png')(class="card-product__paper-color-item")
+                                    +radio-color('color2', 'color', '2.png')(class="card-product__paper-color-item")
+                                    +radio-color('color3', 'color', '3.png')(class="card-product__paper-color-item")
+                                    +radio-color('color4', 'color', '4.png')(class="card-product__paper-color-item")
+                                    +radio-color('color5', 'color', '5.png')(class="card-product__paper-color-item")
+                                    +radio-color('color6', 'color', '6.png')(class="card-product__paper-color-item")
+                                    +radio-color('color7', 'color', '7.png')(class="card-product__paper-color-item")
+                                    +radio-color('color8', 'color', '8.png')(class="card-product__paper-color-item")
+                                    +radio-color('color9', 'color', '9.png')(class="card-product__paper-color-item")
+                                    +radio-color('color10', 'color', '10.png')(class="card-product__paper-color-item")
+                                    +radio-color('color11', 'color', '11.png')(class="card-product__paper-color-item")
+                                    +radio-color('color12', 'color', '12.png')(class="card-product__paper-color-item")
+                                    +radio-color('color13', 'color', '13.png')(class="card-product__paper-color-item")
+                                    +radio-color('color14', 'color', '14.png')(class="card-product__paper-color-item")
+                                    +radio-color('color15', 'color', '15.png')(class="card-product__paper-color-item")
+                            .card-product__upload
+                                span.card-product__upload-status#file-name Файл не выбран
+                                label.card-product__upload-btn
+                                    input(name="file" type="file" onchange="getFileName();" id="uploaded-file")
+                                    span Загрузить свой макет
+                        .card-product__tabs-box.box
+                            table.card-product__table
+                                tr.card-product__row
+                                    th.card-product__th Тираж
+                                    th.card-product__th Односторонние
+                                    th.card-product__th Двухсторонние
+                                tr.card-product__row
+                                    td.card-product__cell 100
+                                    td.card-product__cell 2.00 р.
+                                    td.card-product__cell 2.00 р.
+                                tr.card-product__row
+                                    td.card-product__cell 300
+                                    td.card-product__cell 1.50 р.
+                                    td.card-product__cell 1.50 р.
+                                tr.card-product__row
+                                    td.card-product__cell 500
+                                    td.card-product__cell 1.20 р.
+                                    td.card-product__cell 1.20 р.
+                                tr.card-product__row
+                                    td.card-product__cell 1000
+                                    td.card-product__cell 1.10 р.
+                                    td.card-product__cell 1.10 р.
+                                tr.card-product__row
+                                    td.card-product__cell 1500
+                                    td.card-product__cell 1.00 р.
+                                    td.card-product__cell 1.00 р.
+                                tr.card-product__row
+                                    td.card-product__cell 2000
+                                    td.card-product__cell 0.95 р.
+                                    td.card-product__cell 0.95 р.
+                                tr.card-product__row
+                                    td.card-product__cell 2500
+                                    td.card-product__cell 0.90 р.
+                                    td.card-product__cell 0.90 р.
+                                tr.card-product__row
+                                    td.card-product__cell 3000
+                                    td.card-product__cell 0.85 р.
+                                    td.card-product__cell 0.85 р.
+                                tr.card-product__row
+                                    td.card-product__cell 4000
+                                    td.card-product__cell 0.80 р.
+                                    td.card-product__cell 0.80 р.
+                            p.card-product__note.
+                                <span class="card-product__note_orange">Примечание.</span> При печати визиток
+                                на дизайнерских бумагах к стоимости добавляется цена выбранного типа бумаги
+                    .card-product__buttons
+                        +orange-btn('заказать')(class="card-product__order-btn")
+                        +more-btn('купить в один клик')(class="card-product__one-click")
+                    .card-product__guarantee
+                        p.card-product__guarantee-txt1 гарантия лучшей цены!
+                        p.card-product__guarantee-txt2 найдете дешевле, вернем разницу
+                            <span class="card-product__guarantee-txt2_orange">*</span>
+                        span.card-product__guarantee-link_orange *
+                        a.card-product__guarantee-link(href="#") правила акции

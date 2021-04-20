@@ -1,0 +1,36 @@
+.portfolio-home
+    size 100% auto
+    background-color #fff
+    padding 50px 0
+
+    &_center
+        size 1200px 100%
+        margin 0 auto
+        position: relative
+        +below(1220px)
+            width 100%
+
+    &__title
+        title()
+        +below(1220px)
+            margin-left: 10px
+
+    &__slider-item
+        position: relative!important
+        z-index 4!important
+    &__slider-img
+        size 263px 269px
+        border-img()
+    &__slider-item:hover &__slider-item-hover
+        display: block
+    &__slider-item-hover
+        size 263px 269px
+        position: absolute
+        top 8px
+        left 8px
+        z-index 5
+        background-color rgba(0,0,0,.5)
+        display: none
+        background-image url(../images/watch_icon.png)
+        background-repeat no-repeat
+        background-position center

@@ -1,0 +1,53 @@
+.widjet
+    size 52px 245px
+    background-color orange
+    position fixed
+    right 0
+    top 100px
+    z-index 5
+    border-top-left-radius 3px
+    border-bottom-left-radius 3px
+    display: none
+    +below(1120px)
+        display: none
+
+    &__hover
+        size 230px 49px
+        background-color rgba(38,47,56,.9)
+        display none
+        position absolute
+        top 0
+        right 0
+        z-index 6
+        font 16px PantonBold
+        color #fff
+        text-align left
+        line-height 49px
+        padding-left: 20px
+
+    &__link
+        size 100% 49px
+        display: block
+        text-decoration: none
+        text-align: center
+        line-height 49px
+        position: relative
+
+    &__elem-bg
+        border 8px solid transparent
+        border-right 8px solid orange
+        position: absolute
+        left -15px
+        top 18px
+        display: none
+
+    &__link:hover &__elem-bg
+        display: block
+
+    &__link:hover &__hover
+        display: block
+
+    &__icon
+        vertical-align: middle
+        position: relative
+        z-index 7

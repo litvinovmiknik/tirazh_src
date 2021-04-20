@@ -1,0 +1,71 @@
+.content
+    .content_center
+        .order-detail
+            +breadcrumbs(['Главная', 'Личный кабинет', 'История заказов', 'Заказ № 111 от 13.12.2016'])
+            +title-big('Заказ № 111 от 13.12.2016')(class="order-detail__title")
+            .order-detail__left
+                p.order-detail__status
+                    span.order-detail__status-name Текущий статус:
+                    span.order-detail__status-value Ожидает оплаты
+                p.order-detail__sum
+                    span.order-detail__sum-name Сумма заказа:
+                    span.order-detail__sum-value 4 250 Р.
+                +title-mid('Персональные данные')(class="order-detail__title-mid")
+                p.order-detail__info
+                    span.order-detail__info-name ФИО:
+                    span.order-detail__info-value Иванов Иван Иванович
+                p.order-detail__info
+                    span.order-detail__info-name E-mail:
+                    span.order-detail__info-value ivan_ivanov@maile.ru
+                p.order-detail__info
+                    span.order-detail__info-name Телефон:
+                    span.order-detail__info-value +7-912-333-44-55
+                p.order-detail__info
+                    span.order-detail__info-name Адрес доставки:
+                    span.order-detail__info-value Москва, ул. Иванов, д.10, кв. 1
+                +title-mid('Данные оплаты и доставки')(class="order-detail__title-mid")
+                p.order-detail__info
+                    span.order-detail__info-name Оплата:
+                    span.order-detail__info-value Наличные курьеру
+                p.order-detail__info
+                    span.order-detail__info-name Статус:
+                    span.order-detail__info-value Не оплачен
+                p.order-detail__info
+                    span.order-detail__info-name Доставка:
+                    span.order-detail__info-value Курьером
+                +orange-btn('оплатить заказ')(class="order-detail__orange-btn")
+                +cancel-btn('отменить')(class="order-detail__cancel-btn")
+            .order-detail__right
+                table.order-detail__table
+                    thead.order-detail__thead
+                        tr.order-detail__row
+                            th.order-detail__th(colspan="4")
+                                +title-mid('товары в заказе')
+                    tr.order-detail__row
+                        td.order-detail__cell
+                            img(src="assets/images/card-product/1_thumb.jpg")
+                        td.order-detail__cell
+                            p.order-detail__product-name цифровая печать визиток
+                            p.order-detail__product-type Односторонняя
+                            p.order-detail__product-edition
+                                | Тираж:
+                                span.order-detail__product-edition_bold 100 шт.
+                            p.order-detail__product-material
+                                | Бумага:
+                                span.order-detail__product-material_bold Мелованная бумага
+                        td.order-detail__cell 1 шт.
+                        td.order-detail__cell 200.00 Р.
+                    tr.order-detail__row
+                        td.order-detail__cell
+                            img(src="assets/images/card-product/3_thumb.jpg")
+                        td.order-detail__cell
+                            p.order-detail__product-name цифровая печать визиток
+                            p.order-detail__product-type Односторонняя
+                            p.order-detail__product-edition
+                                | Тираж:
+                                span.order-detail__product-edition_bold 100 шт.
+                            p.order-detail__product-material
+                                | Бумага:
+                                span.order-detail__product-material_bold Мелованная бумага
+                        td.order-detail__cell 1 шт.
+                        td.order-detail__cell 200.00 Р.

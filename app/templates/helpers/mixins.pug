@@ -1,0 +1,170 @@
+mixin product(icon, name, txt, link)
+    a.product(href=link)
+        p.product__icon-wrap: img.product__icon(src=icon alt="")
+        p.product__name!= name
+        if txt
+            p.product__txt!= txt
+
+mixin portfolio-item(icon, name, txt, detail)
+    if detail
+        .portfolio-item
+            a.portfolio-item__hover-detail(data-fancybox="portfolio-detail" href="assets/images/portfolio/" + icon)
+            img.portfolio-item__icon(src="assets/images/portfolio/" + icon alt="")
+            if name
+                p.portfolio-item__name!= name
+            if txt
+                p.portfolio-item__txt!= txt
+    else
+        a.portfolio-item(href="portfolio-detail.html")
+            .portfolio-item__hover
+            img.portfolio-item__icon(src="assets/images/portfolio/"+icon alt="")
+            if name
+                p.portfolio-item__name!= name
+            if txt
+                p.portfolio-item__txt!= txt
+
+mixin orange-btn(txt)
+    button.orange-btn(type="button" class!=attributes.class)= txt
+
+mixin more-btn(txt)
+    button.more-btn(type="button" class!=attributes.class)= txt
+
+mixin cancel-btn(txt)
+    button.cancel-btn(type="button" class!=attributes.class)= txt
+
+mixin done-btn(txt)
+    button.done-btn(type="button" class!=attributes.class)= txt
+
+mixin border-btn(txt)
+    button.border-btn(type="button" class!=attributes.class)= txt
+
+mixin marker(name, address)
+    .marker(class!=attributes.class)
+        img.marker__facade(src="assets/images/facade.jpg" alt="")
+        if name
+            p.marker__name= name
+        if address
+            p.marker__address!= address
+        img.marker__img(src="assets/images/facade_marker.png" alt="")
+
+mixin review(name, photo, post, txt)
+    .review
+        p.review__name= name
+        img.review__photo(src="assets/images/reviews/"+photo alt="")
+        p.review__post!= post
+        p.review__txt
+            i.review__txt_before_quote
+            != txt
+            i.review__txt_after_quote
+        p.review__link-wrap
+            img.review__link-icon(src="assets/images/review_icon.png" alt="")
+            a.review__link(href="#") Оригинал отзыва
+
+mixin new(img, date, txt, sep)
+    a.new(href="news-detail.html")
+        .new__hover
+        img.new__img(src="assets/images/news/"+img alt="")
+        p.new__date= date
+        p.new__txt!= txt
+        if sep
+            p.new__sep
+
+mixin input(type, name, placeholder)
+    input.input(type=type, name=name, placeholder=placeholder, class!=attributes.class)
+
+mixin breadcrumbs(arr)
+    .breadcrumbs
+        each val, index in arr
+            if index == (arr.length - 1)
+                span.breadcrumbs__cur= val
+            else
+                a.breadcrumbs__link(href="#")= val
+                span.breadcrumbs__sep >
+
+mixin catalog__item(name, img, cost, count, type)
+    a.catalog__item(href="product.html")
+        p.catalog__name= name
+        img.catalog__img(src=img)
+        p.catalog__cost= cost
+        p.catalog__count= count
+        p.catalog__type= type
+        +orange-btn('подробнее')(class="catalog__button")
+
+mixin title-big(txt)
+    h2.title-big(class!=attributes.class)= txt
+
+mixin title-mid(txt)
+    h3.title-mid(class!=attributes.class)= txt
+
+mixin title-small(txt)
+    h4.title-small(class!=attributes.class)= txt
+
+mixin checkbox(id, name, txt)
+    .checkbox(class!=attributes.class)
+        input(type="checkbox" id=id name=name)
+        label(for=id)= txt
+
+mixin radio-fill-btn(id, name, txt)
+    .radio-fill-btn(class!=attributes.class)
+        input(type="radio" id=id name=name)
+        label(for=id)!= txt
+
+mixin radio-btn(id, name, txt)
+    .radio-btn(class!=attributes.class)
+        input(type="radio" id=id name=name)
+        label(for=id)!= txt
+
+mixin radio-color(id, name, img)
+    .radio-color(class!=attributes.class)
+        input(type="radio" id=id name=name)
+        label(for=id style="background-image: url('assets/images/paper-color/"+img+"');")
+
+mixin radio(id, name, txt)
+    .radio(class!=attributes.class)
+        input(type="radio" id=id name=name)
+        label(for=id)!= txt
+
+mixin spinner()
+    .spinner(class!=attributes.class)
+        button.spinner__button.spinner__dec(type="button") -
+        input.spinner__input(type="text" value="100" data-min="100" data-max="40000")
+        button.spinner__button.spinner__inc(type="button") +
+
+mixin format(title, cost, img)
+    .format
+        p.format__title= title
+        img.format__img(src="assets/images/formats/"+img)
+        p.format__cost= cost
+
+mixin news-detail-content(date)
+    .news-detail__content
+        if date
+            p.news-detail__date 27.01.2017
+        p.news-detail__txt.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin
+            gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
+            nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+            laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales
+            pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
+            sapien nunc eget.
+        p.news-detail__txt.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin
+            gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam
+            fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+        .news-detail__img-wrap
+            img.news-detail__img(src="assets/images/news-detail/1.jpg")
+            img.news-detail__img(src="assets/images/news-detail/2.jpg")
+        p.news-detail__txt.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+            Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar
+            tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
+            nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+            laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales
+            pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+            mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
+            nunc eget.

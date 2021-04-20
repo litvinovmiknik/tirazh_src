@@ -1,0 +1,44 @@
+.cabinet
+    &__title
+        margin 20px 0
+        +below(1220px)
+            margin-left: 10px
+    &__list-wrap
+        +below(1220px)
+            text-align: center
+    &__item
+        display: inline-block
+        vertical-align: top
+        size 398px 280px
+        background-color #fff
+        text-decoration: none
+        margin 0 3px 20px -5px
+        text-align: center
+        +below(1220px)
+            margin 0 10px 20px
+            border-radius 3px
+        +below(450px)
+            width 100%
+            margin 10px 0
+        &:first-child
+            border-top-left-radius 3px
+            border-bottom-left-radius 3px
+            margin-left: 0
+            +below(1220px)
+                margin-left: 10px
+            +below(450px)
+                margin-left: 0
+        &:last-child
+            border-top-right-radius 3px
+            border-bottom-right-radius 3px
+            margin-right: 0
+            +below(1220px)
+                margin-right: 10px
+            +below(450px)
+                margin-right: 0
+    &__icon
+        margin 80px 0 20px 0
+    &__name
+        font 18px PantonBold
+        color light_blue
+        text-transform: uppercase

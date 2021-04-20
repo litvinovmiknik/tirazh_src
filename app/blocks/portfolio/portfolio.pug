@@ -1,0 +1,15 @@
+.content
+    .content_center
+        .portfolio
+            +breadcrumbs(['Главная', 'Портфолио'])
+            +title-big('Портфолио')(class="portfolio__title")
+            .portfolio__list-wrap
+                +portfolio-item('1.jpg', 'визитки', '25 изображений')
+                +portfolio-item('2.jpg', 'книжная продукция', '12 изображений')
+                +portfolio-item('3.jpg', 'каталоги и брошюры', '17 изображений')
+                +portfolio-item('4.jpg', 'листовки и буклеты', '38 изображений')
+                +portfolio-item('1.jpg', 'визитки', '25 изображений')
+                +portfolio-item('2.jpg', 'книжная продукция', '12 изображений')
+                +portfolio-item('3.jpg', 'каталоги и брошюры', '17 изображений')
+                +portfolio-item('4.jpg', 'листовки и буклеты', '38 изображений')
+            include ../pagination/pagination
